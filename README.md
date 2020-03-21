@@ -64,8 +64,8 @@ Ejecutar desde consola CMD, Power Shell o Terminal, ubicarse en el directorio do
 
 Windows: >python [nombre del archivo].py
 
-1ero : ingresopersonas2.py\n
-2do: entrenamiento.py\n
-3ero: identificaringreso.py
-4to: identificarsalida.py
-5to: checklist.py
+#1ero : ingresopersonas2.py
+#2do: entrenamiento.py
+#3ero: identificaringreso.py
+#4to: identificarsalida.py
+#5to: checklist.py
