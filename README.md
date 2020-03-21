@@ -1,5 +1,5 @@
 # DeteccionDeRostros
-Detección de rostros con Python y OpenCV con lectura de datos en sql lite
+Detección de rostros con Python y OpenCV (haarcascade_frontalface_default.xml) con lectura y escritura de datos en sql lite
 
 PREPARACION:
 
@@ -13,15 +13,45 @@ Descargar OpenCV 2.4.13 - https://opencv.org/releases/page/4/
 		en la carpeta "site-packages" del directorio de instalacion de python 2.7
 		[C:\Python27\Lib\site-packages]
 
+Descargar easy_install.exe - file:///C:/Python27/Scripts/
+	Ubicar este archivo en la carpeta "Scripts" del directorio de instalacion de python 2.7
+	[C:\Python27\Scripts]
+
+Descargar e instalar SQLliteStudio 3.1.1 - https://sqlitestudio.pl/index.rvt?act=download
+
+Elegir un directorio "Deteccion de rostros" para alojar los ejecutables, dentro de este crear la siguiente estructura de carpetas:
+
+C:\..\Deteccion de rostros>dir
+ El volumen de la unidad C es Windows10
+ El número de serie del volumen es: A6D5-BE07
+
+ Directorio de C:\..\Deteccion de rostros
+
+21/03/2020  13:06    <DIR>          .
+21/03/2020  13:06    <DIR>          ..
+21/03/2020  13:06    <DIR>          archivos
+21/03/2020  13:06    <DIR>          imagenes
+               0 archivos              0 bytes
+               4 dirs  12.369.747.968 bytes libres
+
+A nivel de la carpeta "Deteccion de rostros" colocar los archivos ejecutables .py y el archivo de SQLite .db
+
+Dentro de la carpeta "archivos" colocar los archivos:
+haarcascade_frontalface_default.xml
+Entrenamiento.yml
+
+Dentro de la carpeta "imagenes" se guardaran las capturas de rostros que el sistema utiliza para el proceso de entrenamiento
+
 FUNCIONALIDAD:
 
 Este proyecto esta enfocado al reconocimiento de rostros y busca ser implementado
-como asitente para la toma de asistencia personal de grupos de personas dentro de
-un salon de clases, auditorio y demas.
+como apoyo para la toma de asistencia de grupos de personas dentro de
+un salon de clases, reunion y demas.
 
 EXPLICACION:
 
-Para esto existen cinco modulos, que deben ejecutarse en un orden establecido.
+Para esto existen cinco modulos, que deben ejecutarse en un orden establecido:
+
 Uno: El sistema debe registrar el rostro (fotografia), nombre e identificador por persona.
 Dos: El sistema debe entrenarse para el posterior reconocimiento.
 Tres: Identificar el ingreso de personas, lo que seria ya el funcionamiento o la toma de asistencia. En esta parte se registra en base de datos la hora en que se capturan los rostros.
